@@ -1,0 +1,52 @@
+
+/*CONTENT*/
+.content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;	
+}
+.trading{
+	display: flex;
+	align-items: center;
+	gap:10vw;
+}
+.trading img{
+	max-width:25vw;
+	height:auto;
+}
+/*INFO*/
+.info{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap:0;
+}
+.section{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap:5vw;
+	width:80vw;
+	padding:6vw;
+}
+.description{
+	display: flex;
+	align-items: center;
+	gap:2vw;
+}
+.description img{
+	max-width:25vw;
+	height:auto;
+}
+.description-text{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap:2vw;
+}
+.info-date{
+	font-size:0.5rem;
+}
+.info-title{
+	color:green;
+}
