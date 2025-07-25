@@ -1,0 +1,72 @@
+
+/*TEXT EFFECTS*/
+.glow{
+	color: #000;
+	text-shadow:
+		0 0 10px #0f0;
+}
+/*CONTENT*/
+.content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align:center;	
+}
+/*ABOUT US*/
+.about-box-holder{
+	display:flex;
+	flex-direction:column;
+	gap:0;
+	width:70vw;
+}
+.img-border{
+	position: relative;
+	background: url('../../assets/body/about/design/Outline 2.png') no-repeat center center;
+	background-size: 43vw;
+	padding: 0;
+}
+
+.about-box-holder div:nth-of-type(1){
+	transform:translate(-25%);
+	padding:30px;
+}
+.about-box-holder svg:nth-of-type(1) path{
+	stroke:red;
+}
+.about-box-holder div:nth-of-type(2){
+	transform:translate(25%);
+	padding:30px;
+}
+.about-box-holder svg:nth-of-type(2) path{
+	stroke:green;
+}
+.about-box-holder div:nth-of-type(3){
+	transform:translate(-25%);
+	padding:35px;
+}
+.about-box-holder svg:nth-of-type(3) path{
+	stroke:blue;
+}
+/*FOUNDERS + CREW*/
+.founders-collection, .crew-collection{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	margin-top:5vw;
+	margin-bottom:5vw;
+	gap:5vw;
+}
+.founder, .crew-member {
+	display:flex;
+	flex-direction:column;
+	align-items: center;
+}
+.founder img, .crew-member img{
+	max-width:15vw;
+	height:auto;
+}
+.founders p, .crew p{
+	text-align:center;
+}
+

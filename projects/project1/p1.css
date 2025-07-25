@@ -1,0 +1,126 @@
+body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f4f4f4;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .navbar {
+      width: 98%;
+      background: #222;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1.5rem;
+      height: 60px;
+      position: relative;
+      z-index: 10;
+    }
+    .navbar .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+    .burger {
+      width: 35px;
+      height: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+      z-index: 20;
+    }
+    .burger span {
+      display: block;
+      height: 4px;
+      width: 100%;
+      background: #fff;
+      border-radius: 2px;
+      transition: 0.4s;
+    }
+    .burger.open span:nth-child(1) {
+      transform: rotate(45deg) translate(7px, 7px);
+    }
+    .burger.open span:nth-child(2) {
+      opacity: 0;
+    }
+    .burger.open span:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -7px);
+    }
+    .sidepanel {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100%;
+      background: #333;
+      color: #fff;
+      transition: left 0.3s;
+      z-index: 15;
+      display: flex;
+      flex-direction: column;
+      padding-top: 60px;
+    }
+    .sidepanel.open {
+      left: 0;
+    }
+    .sidepanel button {
+      background: none;
+      border: none;
+      color: #fff;
+      padding: 1rem 2rem;
+      text-align: left;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .sidepanel button:hover {
+      background: #444;
+    }
+    .main-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 0;
+    }
+    #three-container {
+      width: 80vw;
+      max-width: 900px;
+      height: 60vh;
+      background: #222;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+      position: relative;
+      overflow: hidden;
+    }
+    .footer {
+      width: 100%;
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+      font-size: 1rem;
+      letter-spacing: 1px;
+    }
+    .label {
+      position: absolute;
+      background: rgba(0,0,0,0.7);
+      color: #fff;
+      padding: 4px 10px;
+      border-radius: 6px;
+      pointer-events: none;
+      font-size: 0.95rem;
+      white-space: nowrap;
+      z-index: 5;
+      transform: translate(-50%, -120%);
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+    .label.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }

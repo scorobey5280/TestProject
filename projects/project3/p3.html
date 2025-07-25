@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Custom Scroll Bars</title>
+  <link rel="stylesheet" href="p3.css" />
+</head>
+<body>
+<nav class="navbar">
+    <div class="logo">Elden Scroll</div>
+    <div class="burger" id="burger-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+  <div class="sidepanel" id="sidepanel">
+    <button><a href="../../index.html">back</a></button>
+    <button><a href="../project1/p1.html">BAnanana NAbababa</a></button>
+    <button><a href="../project2/p2.html">I'm Rursor Cick!!</a></button>
+    <!-- Add more buttons as needed -->
+  <div class="scroll-container">
+    <!-- Scroll Bar 1 -->
+    <div class="scroll-bar" id="bar1">
+      <div class="scroll-fill" id="bar1-fill"></div>
+    </div>
+
+    <!-- Scroll Bar 2 - SVG -->
+    <div class="svg-bar">
+      <svg viewBox="0 0 100 300">
+        <path d="M50 0 C70 75, 30 75, 50 150 C70 225, 30 225, 50 300" stroke="#555"/>
+        <path id="progress-path" class="progress-path" d="M50 0 C70 75, 30 75, 50 150 C70 225, 30 225, 50 300"/>
+      </svg>
+    </div>
+
+    <!-- Scroll Bar 3 - Circle with rolling % -->
+    <div class="scroll-circle">
+      <div class="percentage-track" id="percentTrack">
+        <!-- Filled with JS -->
+      </div>
+    </div>
+  </div>
+
+  <script src="p3.js"></script>
+
+</body>
+</html>

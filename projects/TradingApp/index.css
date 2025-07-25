@@ -1,0 +1,60 @@
+
+/*CONTENT*/
+.content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.content-img{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap:2vw;
+}
+
+.content-img div img{
+	max-width:20vw;
+	height:auto;
+}
+/*TEXT EFFECTS*/
+.glow{
+	color: #000;
+	text-shadow:
+		0 0 10px #0f0;
+}
+
+/*CONTENT list*/
+.steps{
+	position: relative;
+	padding:50px;
+	margin-bottom:10vw;
+}
+.list-name{
+	color:#0b0;
+	font-size:1.5rem;
+	margin-bottom:2vw;
+}
+.steps ol{
+	list-style: none;
+	padding-left: 0;
+}
+.steps ol li{
+	display:flex;
+	gap:1rem;
+	margin-bottom:1.5rem;
+}
+.steps ol li span{
+	text-align:center;
+	width:0.8rem;
+	height:0.8rem;
+}
+/*STAMP*/
+.stamp{
+	position: absolute;
+	right:-10px;
+	bottom:-50px;
+}
+.stamp img{
+	max-width:30vw;
+	height:auto;
+}

@@ -1,0 +1,180 @@
+ body {
+      margin: 0;
+      height: 400vh; /* make the page scrollable */
+      background: #999;
+      font-family: sans-serif;
+      overflow-y: scroll;
+	  scrollbar-width: none; /* Firefox */
+    }
+*::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+  width: 0px;
+  background: transparent;
+}
+    .navbar {
+      width: 98%;
+      background: #222;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1.5rem;
+      height: 60px;
+      position: relative;
+      z-index: 10;
+    }
+    .navbar .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+    .burger {
+      width: 35px;
+      height: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+      z-index: 20;
+    }
+    .burger span {
+      display: block;
+      height: 4px;
+      width: 100%;
+      background: #fff;
+      border-radius: 2px;
+      transition: 0.4s;
+    }
+    .burger.open span:nth-child(1) {
+      transform: rotate(45deg) translate(7px, 7px);
+    }
+    .burger.open span:nth-child(2) {
+      opacity: 0;
+    }
+    .burger.open span:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -7px);
+    }
+    .sidepanel {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100%;
+      background: #333;
+      color: #fff;
+      transition: left 0.3s;
+      z-index: 15;
+      display: flex;
+      flex-direction: column;
+      padding-top: 60px;
+    }
+    .sidepanel.open {
+      left: 0;
+    }
+    .sidepanel button {
+      background: none;
+      border: none;
+      color: #fff;
+      padding: 1rem 2rem;
+      text-align: left;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .sidepanel button:hover {
+      background: #444;
+    }
+	
+    .scroll-container {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      pointer-events: none; /* allow clicking through */
+      z-index: 1000;
+    }
+
+    /* First Scroll Bar - colored bar that shows on scroll */
+    .scroll-bar {
+      width: 10px;
+      height: 300px;
+      background: #333;
+      position: relative;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .scroll-fill {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #0f0;
+      height: 0%;
+    }
+
+    .scroll-bar.show {
+      opacity: 1;
+    }
+
+    /* Second Scroll Bar - SVG with loop */
+    .svg-bar {
+      width: 40px;
+      height: 300px;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    path {
+      fill: none;
+      stroke: #fff;
+      stroke-width: 10;
+      stroke-linecap: round;
+    }
+
+    .progress-path {
+      stroke: #0af;
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+    }
+
+    /* Third Scroll Ball - rotating percentage */
+    .scroll-circle {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 4px solid #444;
+      overflow: hidden;
+      background: #222;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .percentage-track {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateY(0%);
+      transition: transform 0.2s ease-out;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .percentage-track span {
+      height: 80px;
+      line-height: 80px;
+    }
